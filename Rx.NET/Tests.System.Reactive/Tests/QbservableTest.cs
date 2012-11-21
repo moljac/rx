@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 
+#if !NO_REFLECTION_EMIT
 #if !SILVERLIGHTM7
 
 using System;
@@ -2118,4 +2119,5 @@ namespace ReactiveTests.Tests
     }
 }
 
+#endif
 #endif
