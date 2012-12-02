@@ -1470,7 +1470,7 @@ namespace ReactiveTests.Tests
             ReactiveAssert.Throws<ArgumentNullException>(() => ObservableEx.ManySelect<int, int>(DummyObservable<int>.Instance, null));
         }
 
-#if !MONOTOUCH // mcs rejects to compile this use of generic extension method.
+#if !MONOTOUCH && !MONODROID // mcs rejects to compile this use of generic extension method.
         [TestMethod]
         public void ManySelect_Law_1()
         {
