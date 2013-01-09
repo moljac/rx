@@ -335,7 +335,7 @@ namespace ReactiveTests.Tests
         [TestMethod]
         public void Scheduler_Periodic_HostLifecycleManagement()
         {
-            var cur = AppDomain.CurrentDomain.BaseDirectory;
+            var cur = Utils.GetTestBaseDirectory();
 
             var domain = AppDomain.CreateDomain("HLN", null, new AppDomainSetup { ApplicationBase = cur });
 
