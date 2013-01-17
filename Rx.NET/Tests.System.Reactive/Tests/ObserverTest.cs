@@ -739,12 +739,18 @@ namespace ReactiveTests.Tests
         }
 
         [TestMethod]
-        public void NotifyOn_Scheduler_OnCompleted()
+#if MONOTOUCH
+        [Ignore ("This causes AOT crash")]
+#endif
+		public void NotifyOn_Scheduler_OnCompleted()
         {
             NotifyOn_Scheduler(true);
         }
 
         [TestMethod]
+#if MONOTOUCH
+        [Ignore ("This causes AOT crash")]
+#endif
         public void NotifyOn_Scheduler_OnError()
         {
             NotifyOn_Scheduler(false);
