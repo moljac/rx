@@ -38,24 +38,6 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Reactive.Core">
-      <HintPath>..\libs\System.Reactive.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Interfaces">
-      <HintPath>..\libs\System.Reactive.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Linq">
-      <HintPath>..\libs\System.Reactive.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.PlatformServices">
-      <HintPath>..\libs\System.Reactive.PlatformServices.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Experimental">
-      <HintPath>..\libs\System.Reactive.Experimental.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Debugger">
-      <HintPath>..\libs\System.Reactive.Debugger.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -100,6 +82,18 @@
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
       <Name>Android.NUnitLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Reactive.Core\System.Reactive.Core.csproj">
+      <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
+      <Name>System.Reactive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Reactive.Linq\System.Reactive.Linq.csproj">
+      <Project>{63252AE9-5186-45CA-BFCD-FA51C6B66A43}</Project>
+      <Name>System.Reactive.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Reactive.PlatformServices\System.Reactive.PlatformServices.csproj">
+      <Project>{0CCCF009-763F-40D2-8655-7A94828023BF}</Project>
+      <Name>System.Reactive.PlatformServices</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
