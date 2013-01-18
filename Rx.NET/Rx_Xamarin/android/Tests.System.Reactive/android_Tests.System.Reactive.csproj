@@ -32,6 +32,7 @@
     <ConsolePause>False</ConsolePause>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <DefineConstants>MONODROID;NO_TASK_DELAY;NUNIT;NO_WINDOWS_THREADING</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
