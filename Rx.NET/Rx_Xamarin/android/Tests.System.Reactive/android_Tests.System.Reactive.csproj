@@ -38,6 +38,30 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\libs\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Debugger">
+      <HintPath>..\libs\System.Reactive.Debugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Experimental">
+      <HintPath>..\libs\System.Reactive.Experimental.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\libs\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\libs\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\libs\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Providers">
+      <HintPath>..\libs\System.Reactive.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Runtime.Remoting">
+      <HintPath>..\libs\System.Reactive.Runtime.Remoting.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <!--
@@ -308,38 +332,6 @@
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
       <Name>Android.NUnitLite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Core\android_System.Reactive.Core.csproj">
-      <Project>{FEF62C23-10CD-4DEF-A5AE-54A8B309E970}</Project>
-      <Name>android_System.Reactive.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Experimental\android_System.Reactive.Experimental.csproj">
-      <Project>{00DC3654-E373-4E3F-80FE-109F795ADF1F}</Project>
-      <Name>android_System.Reactive.Experimental</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj">
-      <Project>{4FA878DC-6E88-43C4-B37B-8C1151CEC56F}</Project>
-      <Name>android_System.Reactive.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.PlatformServices\android_System.Reactive.PlatformServices.csproj">
-      <Project>{D263C126-9D3C-4299-A0C1-F25C703D07C9}</Project>
-      <Name>android_System.Reactive.PlatformServices</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Debugger\android_System.Reactive.Debugger.csproj">
-      <Project>{9360E845-D79D-4288-9100-63A80FAD2BF0}</Project>
-      <Name>android_System.Reactive.Debugger</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Providers\android_System.Reactive.Providers.csproj">
-      <Project>{E662282B-4341-4F86-AAAA-A942335B47FB}</Project>
-      <Name>android_System.Reactive.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Runtime.Remoting\android_System.Reactive.Runtime.Remoting.csproj">
-      <Project>{A153A379-670C-42C2-9018-FC0D933A4F7F}</Project>
-      <Name>android_System.Reactive.Runtime.Remoting</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Linq\android_System.Reactive.Linq.csproj">
-      <Project>{EC704077-EA31-4852-AD24-6732244174C0}</Project>
-      <Name>android_System.Reactive.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mono.Reactive.Testing\android_Mono.Reactive.Testing.csproj">
       <Project>{CB2AB716-BFCB-43BC-A03B-A3BDA427746C}</Project>
