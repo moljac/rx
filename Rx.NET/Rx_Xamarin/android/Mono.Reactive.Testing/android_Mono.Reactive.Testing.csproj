@@ -5,20 +5,18 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{35DEE616-4AD5-4560-9E19-A86836857626}</ProjectGuid>
+    <ProjectGuid>{CB2AB716-BFCB-43BC-A03B-A3BDA427746C}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Mono.Reactive.Testing</RootNamespace>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <RootNamespace>System.Reactive</RootNamespace>
     <AssemblyName>Mono.Reactive.Testing</AssemblyName>
+    <DefineConstants>DEBUG;NO_TASK_DELAY;NUNIT</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>False</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;NO_TASK_DELAY;NUNIT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
@@ -39,8 +37,20 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
+    <!--
+    <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
+      <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
+      <Name>Android.NUnitLite</Name>
+    </ProjectReference>
+    -->
+  </ItemGroup>
+  <ItemGroup>
+    <!--
+    <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
+      <Link>ColdObservable.cs</Link>
+    </Compile>
+    -->
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
       <Link>ColdObservable.cs</Link>
     </Compile>
@@ -62,6 +72,9 @@
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\NamespaceDoc.cs">
       <Link>NamespaceDoc.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\Microsoft.Reactive.Testing\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\ReactiveAssert.cs">
       <Link>ReactiveAssert.cs</Link>
     </Compile>
@@ -78,22 +91,23 @@
       <Link>TestScheduler.cs</Link>
     </Compile>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\rx\System.Reactive.Core\android_System.Reactive.Core.csproj">
+      <Project>{FEF62C23-10CD-4DEF-A5AE-54A8B309E970}</Project>
+      <Name>android_System.Reactive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rx\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj">
+      <Project>{4FA878DC-6E88-43C4-B37B-8C1151CEC56F}</Project>
+      <Name>android_System.Reactive.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
       <Name>Android.NUnitLite</Name>
     </ProjectReference>
-    <ProjectReference Include="..\System.Reactive.Core\System.Reactive.Core.csproj">
-      <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
-      <Name>System.Reactive.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\System.Reactive.Linq\System.Reactive.Linq.csproj">
-      <Project>{63252AE9-5186-45CA-BFCD-FA51C6B66A43}</Project>
-      <Name>System.Reactive.Linq</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\System.Reactive.PlatformServices\System.Reactive.PlatformServices.csproj">
-      <Project>{0CCCF009-763F-40D2-8655-7A94828023BF}</Project>
-      <Name>System.Reactive.PlatformServices</Name>
+    <ProjectReference Include="..\rx\System.Reactive.Linq\android_System.Reactive.Linq.csproj">
+      <Project>{EC704077-EA31-4852-AD24-6732244174C0}</Project>
+      <Name>android_System.Reactive.Linq</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
