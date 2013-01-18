@@ -25,7 +25,7 @@ namespace ReactiveTests
             // There is no accessible file system inside android application.
             return System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
 #else
-            return AppDomain.CurrentDomain.BaseDirectory;
+            return System.AppDomain.CurrentDomain.BaseDirectory;
 #endif
         }
     }
