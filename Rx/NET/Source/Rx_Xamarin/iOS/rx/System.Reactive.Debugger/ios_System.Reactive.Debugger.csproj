@@ -13,6 +13,8 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>System.Reactive.Debugger</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
+    <DefineConstants>NO_TASK_DELAY;NUNIT;SIGNED</DefineConstants>
+    <additionalargs>-delaysign -keyfile:../reactive.pub</additionalargs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -21,7 +23,7 @@
     <OutputPath>bin\Debug</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;MONOTOUCH;NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
+    <DefineConstants>DEBUG;$(DefineConstants)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -29,9 +31,10 @@
     <OutputPath>bin\Release</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>MONOTOUCH;NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
+    <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
+    <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB</DefineConstants>
     <!--
     <TargetFrameworkIdentifier>iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v2.0.5</TargetFrameworkVersion>
@@ -47,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\System.Reactive.Core\ios_System.Reactive.Core.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -79,10 +83,10 @@
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-        <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Debugger\Properties\AssemblyInfo.cs'>
+        <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Debugger\Properties\AssemblyInfo.cs'>
       <Link>Properties/AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Debugger\Reactive\Linq\QueryDebugger.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Debugger\Reactive\Linq\QueryDebugger.cs'>
       <Link>Reactive/Linq/QueryDebugger.cs</Link>
     </Compile>
 

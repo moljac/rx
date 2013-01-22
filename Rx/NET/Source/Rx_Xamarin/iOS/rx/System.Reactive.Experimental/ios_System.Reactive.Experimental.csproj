@@ -13,6 +13,8 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>System.Reactive.Experimental</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
+    <DefineConstants>NO_TASK_DELAY;NUNIT;SIGNED</DefineConstants>
+    <additionalargs>-delaysign -keyfile:../reactive.pub</additionalargs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -21,7 +23,7 @@
     <OutputPath>bin\Debug</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;MONOTOUCH;NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
+    <DefineConstants>DEBUG;$(DefineConstants)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -29,9 +31,10 @@
     <OutputPath>bin\Release</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>MONOTOUCH;NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
+    <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
+    <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB</DefineConstants>
     <!--
     <TargetFrameworkIdentifier>iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v2.0.5</TargetFrameworkVersion>
@@ -47,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\System.Reactive.Linq\ios_System.Reactive.Linq.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -73,34 +77,34 @@
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-        <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\ExperimentalAttribute.cs'>
+        <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\ExperimentalAttribute.cs'>
       <Link>ExperimentalAttribute.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\InternalsVisibleTo.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\InternalsVisibleTo.cs'>
       <Link>InternalsVisibleTo.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Properties\AssemblyInfo.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Properties\AssemblyInfo.cs'>
       <Link>Properties/AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\Internal\BinaryObserver.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\Internal\BinaryObserver.cs'>
       <Link>Reactive/Internal/BinaryObserver.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\Linq\QbservableEx.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\Linq\QbservableEx.cs'>
       <Link>Reactive/Linq/QbservableEx.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\Linq\IQueryLanguageEx.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\Linq\IQueryLanguageEx.cs'>
       <Link>Reactive/Linq/IQueryLanguageEx.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\Linq\ObservableEx.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\Linq\ObservableEx.cs'>
       <Link>Reactive/Linq/ObservableEx.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\Linq\QbservableEx.Generated.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\Linq\QbservableEx.Generated.cs'>
       <Link>Reactive/Linq/QbservableEx.Generated.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\Linq\QueryLanguageEx.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\Linq\QueryLanguageEx.cs'>
       <Link>Reactive/Linq/QueryLanguageEx.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\external\rx\Rx.NET\System.Reactive.Experimental\Reactive\ListObservable.cs'>
+    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Experimental\Reactive\ListObservable.cs'>
       <Link>Reactive/ListObservable.cs</Link>
     </Compile>
 
