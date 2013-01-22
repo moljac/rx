@@ -1,7 +1,7 @@
-diff --git a/Rx.NET/Microsoft.Reactive.Testing/ReactiveAssert.cs b/Rx.NET/Microsoft.Reactive.Testing/ReactiveAssert.cs
+diff --git a/Rx/NET/Source/Microsoft.Reactive.Testing/ReactiveAssert.cs b/Rx/NET/Source/Microsoft.Reactive.Testing/ReactiveAssert.cs
 index e9715a4..86cd62e 100644
---- a/Rx.NET/Microsoft.Reactive.Testing/ReactiveAssert.cs
-+++ b/Rx.NET/Microsoft.Reactive.Testing/ReactiveAssert.cs
+--- a/Rx/NET/Source/Microsoft.Reactive.Testing/ReactiveAssert.cs
++++ b/Rx/NET/Source/Microsoft.Reactive.Testing/ReactiveAssert.cs
 @@ -8,7 +8,9 @@
  using System.Reactive.Disposables;
  using System.Reactive.Linq;

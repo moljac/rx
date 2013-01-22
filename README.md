@@ -33,7 +33,7 @@ As of OSS release 1.0, there are only two steps are required to make it
 possible to build with mono in the source repo:
 
 - apply mono.patch
-- cd Rx/NET/Source/Tests.System.Reactive and run ../../../../replacer.sh
+- cd Rx/NET/Source/Tests.System.Reactive and run "csharp ../../../../replacer.sh"
 
 Actually ObservableExTest.cs cannot be compiled due to insufficient
 type inference for lambdas, so I skipped it in Mono.Reactive.Testing_test.dll.
