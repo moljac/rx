@@ -14,7 +14,10 @@
     <AssemblyName>System.Reactive.Debugger</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
     <DefineConstants>NO_TASK_DELAY;NUNIT;SIGNED</DefineConstants>
-    <additionalargs>-delaysign -keyfile:../reactive.pub</additionalargs>
+    <SignAssembly>True</SignAssembly>
+    <DelaySign>True</DelaySign>
+    <AssemblyOriginatorKeyFile>../../../reactive.pub</AssemblyOriginatorKeyFile>
+
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
