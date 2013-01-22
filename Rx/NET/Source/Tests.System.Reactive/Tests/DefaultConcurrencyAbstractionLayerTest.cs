@@ -29,7 +29,7 @@ namespace ReactiveTests.Tests
         {
             if (_domain == null)
             {
-                var cur = AppDomain.CurrentDomain.BaseDirectory;
+                var cur = Utils.GetTestBaseDirectory();
                 var sub = Path.Combine(cur, "NoCAL");
 
                 if (!Directory.Exists(sub))

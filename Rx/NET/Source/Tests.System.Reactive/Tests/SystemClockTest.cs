@@ -33,7 +33,7 @@ namespace ReactiveTests.Tests
     {
         private void Run(CrossAppDomainDelegate a)
         {
-            var domain = AppDomain.CreateDomain(Guid.NewGuid().ToString(), null, new AppDomainSetup { ApplicationBase = AppDomain.CurrentDomain.BaseDirectory });
+            var domain = AppDomain.CreateDomain(Guid.NewGuid().ToString(), null, new AppDomainSetup { ApplicationBase = Utils.GetTestBaseDirectory() });
             domain.DoCallBack(a);
             AppDomain.Unload(domain);
         }

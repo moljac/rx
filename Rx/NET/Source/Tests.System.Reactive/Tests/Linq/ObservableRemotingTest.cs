@@ -34,8 +34,10 @@ namespace ReactiveTests.Tests
             RemotingObservable.Remotable(Observable.Return(42));
             RemotingObservable.Remotable(Observable.Return(42), null /* valid lease object */);
 
+#if !NO_REFLECTION_EMIT
             RemotingObservable.Remotable(Qbservable.Return(Qbservable.Provider, 42));
             RemotingObservable.Remotable(Qbservable.Return(Qbservable.Provider, 42), null /* valid lease object */);
+#endif
         }
 
         class MyLease : ILease
@@ -179,7 +181,7 @@ namespace ReactiveTests.Tests
 
         private RemotingTest GetRemoteTestObject()
         {
-            var ads = new AppDomainSetup { ApplicationBase = AppDomain.CurrentDomain.BaseDirectory };
+            var ads = new AppDomainSetup { ApplicationBase = Utils.GetTestBaseDirectory() };
             var ad = AppDomain.CreateDomain("test", null, ads);
             var test = (RemotingTest)ad.CreateInstanceAndUnwrap(Assembly.GetExecutingAssembly().FullName, "ReactiveTests.Tests.RemotingTest");
             return test;
