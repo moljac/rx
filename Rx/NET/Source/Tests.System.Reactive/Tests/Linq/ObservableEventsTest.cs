@@ -854,7 +854,10 @@ namespace ReactiveTests.Tests
         }
 
         [TestMethod]
-        public void FromEvent_SynchronizationContext()
+#if MONOTOUCH
+        [Ignore ("This causes AOT crash")]
+#endif
+		public void FromEvent_SynchronizationContext()
         {
             var beforeSubscribeNull = false;
             var afterSubscribeNull = false;
