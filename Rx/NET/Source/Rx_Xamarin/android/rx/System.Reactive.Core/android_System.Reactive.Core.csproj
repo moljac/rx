@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+OPTIONAL_ANDROID_NUNITLITE
 <ProjectReference Include="..\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Project>{9E9B9C60-98B0-40FA-9C2B-1218D417CAA4}</Project>
   <Name>android_System.Reactive.Interfaces</Name>

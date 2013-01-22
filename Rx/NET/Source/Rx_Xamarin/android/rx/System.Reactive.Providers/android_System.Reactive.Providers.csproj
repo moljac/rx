@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+OPTIONAL_ANDROID_NUNITLITE
 <ProjectReference Include="..\System.Reactive.Core\android_System.Reactive.Core.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
   <Name>android_System.Reactive.Core</Name>

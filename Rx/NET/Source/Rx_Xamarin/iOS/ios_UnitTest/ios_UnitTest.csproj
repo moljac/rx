@@ -95,10 +95,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Tests.System.Reactive\ios_Tests.System.Reactive.csproj">
-      <Project>{45377009-1425-47FC-985E-05F98022F9E3}</Project>
-      <Name>ios_Tests.System.Reactive</Name>
-    </ProjectReference>
     <ProjectReference Include="..\rx\System.Reactive.Runtime.Remoting\ios_System.Reactive.Runtime.Remoting.csproj">
       <Project>{92857C8E-0E83-4D02-A831-8AF3FED43336}</Project>
       <Name>ios_System.Reactive.Runtime.Remoting</Name>
@@ -127,9 +123,13 @@
       <Project>{A67F34B5-75C1-4319-A93E-93DF87E728A4}</Project>
       <Name>ios_System.Reactive.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mono.Reactive.Testing\ios_Mono.Reactive.Testing.csproj">
+    <ProjectReference Include="..\rx\Mono.Reactive.Testing\ios_Mono.Reactive.Testing.csproj">
       <Project>{47D85A91-E8E2-4088-BF5A-68A161754D48}</Project>
       <Name>ios_Mono.Reactive.Testing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rx\Tests.System.Reactive\ios_Tests.System.Reactive.csproj">
+      <Project>{45377009-1425-47FC-985E-05F98022F9E3}</Project>
+      <Name>ios_Tests.System.Reactive</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
