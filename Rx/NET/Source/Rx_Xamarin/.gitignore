@@ -1,5 +1,6 @@
 Rx_Xamarin_android.userprefs
-android/rx/Mono.Reactive.Testing/
+android/rx/Mono.Reactive.Testing/bin/
+android/rx/Mono.Reactive.Testing/obj/
 android/rx/System.Reactive.Core/bin/
 android/rx/System.Reactive.Core/obj/
 android/rx/System.Reactive.Debugger/bin/
@@ -18,5 +19,6 @@ android/rx/System.Reactive.Runtime.Remoting/bin/
 android/rx/System.Reactive.Runtime.Remoting/obj/
 android/rx/System.Reactive.Windows.Forms/
 android/rx/System.Reactive.Windows.Threading/
-android/rx/Tests.System.Reactive/
+android/rx/Tests.System.Reactive/bin/
+android/rx/Tests.System.Reactive/obj/
 
