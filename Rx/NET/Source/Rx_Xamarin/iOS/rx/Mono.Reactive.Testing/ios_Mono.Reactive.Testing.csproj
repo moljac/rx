@@ -77,43 +77,43 @@
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-        <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\ColdObservable.cs'>
+        <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/ColdObservable.cs'>
       <Link>ColdObservable.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\GlobalSuppressions.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/GlobalSuppressions.cs'>
       <Link>GlobalSuppressions.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\HotObservable.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/HotObservable.cs'>
       <Link>HotObservable.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\ITestObservable.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/ITestObservable.cs'>
       <Link>ITestObservable.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\ITestObserver.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/ITestObserver.cs'>
       <Link>ITestObserver.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\MockObserver.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/MockObserver.cs'>
       <Link>MockObserver.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\NamespaceDoc.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/NamespaceDoc.cs'>
       <Link>NamespaceDoc.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\Properties\AssemblyInfo.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/Properties/AssemblyInfo.cs'>
       <Link>Properties/AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\ReactiveAssert.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/ReactiveAssert.cs'>
       <Link>ReactiveAssert.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\ReactiveTest.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/ReactiveTest.cs'>
       <Link>ReactiveTest.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\Recorded.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/Recorded.cs'>
       <Link>Recorded.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\Subscription.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/Subscription.cs'>
       <Link>Subscription.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\Microsoft.Reactive.Testing\TestScheduler.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/Microsoft.Reactive.Testing/TestScheduler.cs'>
       <Link>TestScheduler.cs</Link>
     </Compile>
 

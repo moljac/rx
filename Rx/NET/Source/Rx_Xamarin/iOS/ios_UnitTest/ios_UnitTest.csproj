@@ -95,10 +95,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\rx\System.Reactive.Runtime.Remoting\ios_System.Reactive.Runtime.Remoting.csproj">
-      <Project>{92857C8E-0E83-4D02-A831-8AF3FED43336}</Project>
-      <Name>ios_System.Reactive.Runtime.Remoting</Name>
-    </ProjectReference>
     <ProjectReference Include="..\rx\System.Reactive.PlatformServices\ios_System.Reactive.PlatformServices.csproj">
       <Project>{79A43CEB-1A18-49EA-AAC4-B72B9C90BF5A}</Project>
       <Name>ios_System.Reactive.PlatformServices</Name>

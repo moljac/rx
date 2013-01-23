@@ -77,16 +77,16 @@
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-        <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Windows.Forms\GlobalSuppressions.cs'>
+        <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/System.Reactive.Windows.Forms/GlobalSuppressions.cs'>
       <Link>GlobalSuppressions.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Windows.Forms\Reactive\Linq\ControlObservable.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/System.Reactive.Windows.Forms/Reactive/Linq/ControlObservable.cs'>
       <Link>Reactive/Linq/ControlObservable.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Windows.Forms\Reactive\Concurrency\ControlScheduler.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/System.Reactive.Windows.Forms/Reactive/Concurrency/ControlScheduler.cs'>
       <Link>Reactive/Concurrency/ControlScheduler.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Windows.Forms\Properties\AssemblyInfo.cs'>
+    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/System.Reactive.Windows.Forms/Properties/AssemblyInfo.cs'>
       <Link>Properties/AssemblyInfo.cs</Link>
     </Compile>
 
