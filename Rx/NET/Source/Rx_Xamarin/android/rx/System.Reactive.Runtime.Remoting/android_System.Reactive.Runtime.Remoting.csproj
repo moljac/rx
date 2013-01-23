@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{a153a379-670c-42c2-9018-fc0d933a4f7f}</ProjectGuid>
+    <ProjectGuid>{A153A379-670C-42C2-9018-FC0D933A4F7F}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>System.Reactive</RootNamespace>
@@ -13,8 +13,7 @@
     <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;SIGNED;NUNIT;MONODROID</DefineConstants>
     <SignAssembly>True</SignAssembly>
     <DelaySign>True</DelaySign>
-    <AssemblyOriginatorKeyFile>../../../reactive.pub</AssemblyOriginatorKeyFile>
-
+    <AssemblyOriginatorKeyFile>..\..\..\reactive.pub</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -42,14 +41,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-
-<ProjectReference Include="..\System.Reactive.Core\android_System.Reactive.Core.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
-  <Name>android_System.Reactive.Core</Name>
-</ProjectReference><ProjectReference Include="..\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Project>{9E9B9C60-98B0-40FA-9C2B-1218D417CAA4}</Project>
-  <Name>android_System.Reactive.Interfaces</Name>
-</ProjectReference>
+    <ProjectReference Include="..\System.Reactive.Core\android_System.Reactive.Core.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+      <Project>{FEF62C23-10CD-4DEF-A5AE-54A8B309E970}</Project>
+      <Name>android_System.Reactive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+      <Project>{4FA878DC-6E88-43C4-B37B-8C1151CEC56F}</Project>
+      <Name>android_System.Reactive.Interfaces</Name>
+    </ProjectReference>
     <!--
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
@@ -58,25 +57,23 @@
     -->
   </ItemGroup>
   <ItemGroup>
-
     <!--
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Runtime.Remoting\GlobalSuppressions.cs'>
+    <Compile Include="..\..\..\..\System.Reactive.Runtime.Remoting\GlobalSuppressions.cs">
       <Link>GlobalSuppressions.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Runtime.Remoting\Properties\AssemblyInfo.cs'>
-      <Link>Properties/AssemblyInfo.cs</Link>
+    <Compile Include="..\..\..\..\System.Reactive.Runtime.Remoting\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Runtime.Remoting\Reactive\Linq\Observable.Remoting.cs'>
-      <Link>Reactive/Linq/Observable.Remoting.cs</Link>
+    <Compile Include="..\..\..\..\System.Reactive.Runtime.Remoting\Reactive\Linq\Observable.Remoting.cs">
+      <Link>Reactive\Linq\Observable.Remoting.cs</Link>
     </Compile>
-    <Compile Include='..\..\..\..\..\..\..\..\..\external\rx\Rx\NET\Source\System.Reactive.Runtime.Remoting\Reactive\Linq\QueryLanguage.Remoting.cs'>
-      <Link>Reactive/Linq/QueryLanguage.Remoting.cs</Link>
+    <Compile Include="..\..\..\..\System.Reactive.Runtime.Remoting\Reactive\Linq\QueryLanguage.Remoting.cs">
+      <Link>Reactive\Linq\QueryLanguage.Remoting.cs</Link>
     </Compile>
-
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
