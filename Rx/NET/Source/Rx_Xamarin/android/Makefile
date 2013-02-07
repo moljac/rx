@@ -2,7 +2,7 @@
 all: MonoDroid.Dialog Andr.Unit
 
 MonoDroid.Dialog:
-	git clone git://github.com/kevinmcmahon/MonoDroid.Dialog.git
+	git clone git://github.com/atsushieno/MonoDroid.Dialog.git
 
 Andr.Unit:
 	git clone git://github.com/pjcollins/Andr.Unit.git
