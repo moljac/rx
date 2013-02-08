@@ -41,15 +41,15 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\System.Reactive.Linq\android_System.Reactive.Linq.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ProjectReference Include="..\System.Reactive.Linq\android_System.Reactive.Linq.csproj">
       <Project>{EC704077-EA31-4852-AD24-6732244174C0}</Project>
       <Name>android_System.Reactive.Linq</Name>
     </ProjectReference>
-    <ProjectReference Include="..\System.Reactive.Core\android_System.Reactive.Core.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ProjectReference Include="..\System.Reactive.Core\android_System.Reactive.Core.csproj">
       <Project>{FEF62C23-10CD-4DEF-A5AE-54A8B309E970}</Project>
       <Name>android_System.Reactive.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ProjectReference Include="..\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj">
       <Project>{4FA878DC-6E88-43C4-B37B-8C1151CEC56F}</Project>
       <Name>android_System.Reactive.Interfaces</Name>
     </ProjectReference>
