@@ -43,6 +43,15 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="System.Json" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\..\libs\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\..\libs\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\..\libs\System.Reactive.Linq.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -64,18 +73,4 @@
     <AndroidResource Include="Resources\layout\ListItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\home\atsushi\svn\mono\external\rx\Rx\NET\Source\Rx_Xamarin\android\rx\System.Reactive.Core\android_System.Reactive.Core.csproj">
-      <Project>{FEF62C23-10CD-4DEF-A5AE-54A8B309E970}</Project>
-      <Name>android_System.Reactive.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\home\atsushi\svn\mono\external\rx\Rx\NET\Source\Rx_Xamarin\android\rx\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj">
-      <Project>{4FA878DC-6E88-43C4-B37B-8C1151CEC56F}</Project>
-      <Name>android_System.Reactive.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\home\atsushi\svn\mono\external\rx\Rx\NET\Source\Rx_Xamarin\android\rx\System.Reactive.Linq\android_System.Reactive.Linq.csproj">
-      <Project>{EC704077-EA31-4852-AD24-6732244174C0}</Project>
-      <Name>android_System.Reactive.Linq</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
