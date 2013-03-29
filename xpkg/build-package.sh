@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mono xpkg.exe create ReactiveExtensionsForXamarin-2.1.xam \
-	--name="Reactive Extensions for Android" \
+mono xpkg.exe create RxForXamarin-2.1.xam \
+	--name="Reactive Extensions (Rx) for Xamarin" \
 	--publisher="Xamarin, Inc." \
 	--website="http://www.xamarin.com" \
 	--summary="a library for composing asynchronous and event-based programs using observable sequences and LINQ-style query operators." \
@@ -21,7 +21,7 @@ mono xpkg.exe create ReactiveExtensionsForXamarin-2.1.xam \
 	--library=iOS:Rx_Xamarin/iOS/libs/System.Reactive.Debugger.dll \
 	--details=Details.md \
 	--getting-started=GettingStarted.md \
-	--getting-started=Details.md \
-	--icon=ReactiveExtensionsForXamarin_128x128.png \
+	--details=Details.md \
+	--icon=RxForXamarin_128x128.png \
    	--sample="Touch Event Observable Sample. Observable event pattern conversion sample using View.Touch event:Rx_Xamarin/android/samples/ReactiveAndroidSample/ReactiveAndroidSample.sln" \
    	--sample="GitHub API Client Sample. GitHub API client sample demonstrates use of Rx API with GitHub:Rx_Xamarin/android/samples/GithubApiClientSample/GithubApiClientSample.sln"

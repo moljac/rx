@@ -17,7 +17,7 @@ After adding this component to your project, you would notice that there are sev
 
 All other assemblies are optional and you would like to use them only in certain scenarios. On the other hand, those four assemblies are essential. So far let's remove other assemblies in this package.
 
-<img src="ProjectReferences.png" />
+![typical Rx assembly references](https://raw.github.com/mono/rx/master/xpkg/ProjectReferences.png)
 
 (Note that Rx version 2.x is very different from Rx v1.0 in terms of assemblies; Rx 1.0 consists only of System.Reactive.dll, which does not exist in Rx v2.x.)
 
