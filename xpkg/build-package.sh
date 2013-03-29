@@ -1,10 +1,10 @@
 #!/bin/sh
 
 mono xpkg.exe create ReactiveExtensionsForXamarin-1.0.xam \
-	--name="Reactive Extensions for Android" \
+	--name="Reactive Extensions (Rx)" \
 	--publisher="Xamarin, Inc." \
 	--website="http://www.xamarin.com" \
-	--summary="a library for composing asynchronous and event-based programs using observable sequences and LINQ-style query operators." \
+	--summary="A library for composing asynchronous and event-based programs using observable sequences and LINQ-style query operators." \
 	--license="external/rx/Rx/NET/Source/license.txt" \
 	--library=android:external/rx/Rx/NET/Source/Rx_Xamarin/android/libs/System.Reactive.Interfaces.dll \
 	--library=android:external/rx/Rx/NET/Source/Rx_Xamarin/android/libs/System.Reactive.Core.dll \
