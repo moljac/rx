@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>System.Reactive</RootNamespace>
     <AssemblyName>Tests.System.Reactive</AssemblyName>
-    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;SIGNED;NUNIT;MONODROID</DefineConstants>
+    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;HAS_AWAIT;SIGNED;NUNIT;MONODROID</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -80,10 +80,6 @@
     <ProjectReference Include="..\System.Reactive.Providers\android_System.Reactive.Providers.csproj">
       <Project>{E662282B-4341-4F86-AAAA-A942335B47FB}</Project>
       <Name>android_System.Reactive.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\System.Reactive.Runtime.Remoting\android_System.Reactive.Runtime.Remoting.csproj">
-      <Project>{A153A379-670C-42C2-9018-FC0D933A4F7F}</Project>
-      <Name>android_System.Reactive.Runtime.Remoting</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
