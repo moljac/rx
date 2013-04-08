@@ -13,7 +13,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>System.Reactive.Linq</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
-    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;NUNIT;SIGNED</DefineConstants>
+    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;HAS_AWAIT;NUNIT;SIGNED</DefineConstants>
     <SignAssembly>True</SignAssembly>
     <DelaySign>True</DelaySign>
     <AssemblyOriginatorKeyFile>../../../reactive.pub</AssemblyOriginatorKeyFile>
