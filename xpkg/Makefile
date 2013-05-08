@@ -1,4 +1,5 @@
 
+
 all: package
 
 clean: android_clean iOS_clean
@@ -7,7 +8,7 @@ clean: android_clean iOS_clean
 android: Rx_Xamarin android_build android_copy #android_sign
 
 android_build:
-	xbuild Rx_Xamarin/Rx_Xamarin_android.sln /p:AssemblyOriginatorKeyFile=$(KEYFILE_SNK) /p:DelaySign=false
+	xbuild Rx_Xamarin/Rx_Xamarin_android.sln /p:DelaySign=false /p:AssemblyOriginatorKeyFile=$(KEYFILE_SNK) /p:SignAssembly=$(SIGN_ASSEMBLY) /p:SignAssemblySpec=$(SIGN_ASSEMBLY_SPEC)
 
 android_copy:
 	for proj in Interfaces Core Linq PlatformServices Debugger Providers Runtime.Remoting Experimental ; \

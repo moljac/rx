@@ -13,9 +13,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>System.Reactive.Debugger</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
-    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;HAS_AWAIT;NUNIT;SIGNED</DefineConstants>
-    <SignAssembly>True</SignAssembly>
-    <DelaySign>True</DelaySign>
+    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;HAS_AWAIT;NUNIT;$(SignAssemblySpec)</DefineConstants>
     <AssemblyOriginatorKeyFile>../../../reactive.pub</AssemblyOriginatorKeyFile>
 
     <additionalargs>-delaySign</additionalargs>
