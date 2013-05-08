@@ -10,7 +10,7 @@
     <iconUrl>https://raw.github.com/mono/rx/master/Rx/NET/Resources/Artwork/Logo_Color.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>a library for composing asynchronous and event-based programs using observable sequences and LINQ-style query operators. (Android)</description>
-    <releaseNotes>Initial NuGet package release.</releaseNotes>
+    <releaseNotes>Initial NuGet package release. WARNING: this won't work as expected if you are not using Xamarin.Android v4.7.x or later, which ships with some runtime bugfixes.</releaseNotes>
     <copyright>Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.</copyright>
     <tags>Rx Reactive Linq Xamarin Android</tags>
     <frameworkAssemblies>
