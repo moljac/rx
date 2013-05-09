@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{b41cb61a-dca0-4539-8f99-7b3499e18e6d}</ProjectGuid>
+    <ProjectGuid>{B41CB61A-DCA0-4539-8F99-7B3499E18E6D}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -14,8 +14,6 @@
     <AssemblyName>System.Reactive.Debugger</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
     <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;HAS_AWAIT;NUNIT;$(SignAssemblySpec)</DefineConstants>
-    <AssemblyOriginatorKeyFile>../../../reactive.pub</AssemblyOriginatorKeyFile>
-
     <additionalargs>-delaySign</additionalargs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -25,7 +23,7 @@
     <OutputPath>bin\Debug</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;HAS_AWAIT;NUNIT;SIGNED</DefineConstants>
+    <DefineConstants>DEBUG;NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;NUNIT;SIGNED</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -78,19 +76,19 @@
     -->
   </ItemGroup>
   <ItemGroup>
-    
+        <Compile Include="../../../../System.Reactive.Debugger/Properties/AssemblyInfo.cs">
+      <Link>Properties/AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="../../../../System.Reactive.Debugger/Reactive/Linq/QueryDebugger.cs">
+      <Link>Reactive/Linq/QueryDebugger.cs</Link>
+    </Compile>
+
     <!--
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-        <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/System.Reactive.Debugger/Properties/AssemblyInfo.cs'>
-      <Link>Properties/AssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include='../../../../../../../../../external/rx/Rx/NET/Source/System.Reactive.Debugger/Reactive/Linq/QueryDebugger.cs'>
-      <Link>Reactive/Linq/QueryDebugger.cs</Link>
-    </Compile>
-
+    
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
