@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{24F995BD-7075-489C-B7A5-7FDE08C304B6}</ProjectGuid>
+    <ProjectGuid>{4779C7FF-6969-4715-9389-DF6C43655D6F}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Reactive</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>System.Reactive.Experimental</AssemblyName>
+    <AssemblyName>System.Interactive.Providers</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
     <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;HAS_AWAIT;NUNIT;$(SignAssemblySpec)</DefineConstants>
     <additionalargs>-delaySign</additionalargs>
@@ -52,15 +52,9 @@
     
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\System.Reactive.Linq\ios_System.Reactive.Linq.csproj">
-  <Project>{63252AE9-5186-45CA-BFCD-FA51C6B66A43}</Project>
-  <Name>ios_System.Reactive.Linq</Name>
-</ProjectReference><ProjectReference Include="..\System.Reactive.Core\ios_System.Reactive.Core.csproj">
-  <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
-  <Name>ios_System.Reactive.Core</Name>
-</ProjectReference><ProjectReference Include="..\System.Reactive.Interfaces\ios_System.Reactive.Interfaces.csproj">
-  <Project>{9E9B9C60-98B0-40FA-9C2B-1218D417CAA4}</Project>
-  <Name>ios_System.Reactive.Interfaces</Name>
+    <ProjectReference Include="..\System.Interactive\ios_System.Interactive.csproj">
+  <Project>{8E4B04F0-915E-48F9-9796-76278C6094BD}</Project>
+  <Name>ios_System.Interactive</Name>
 </ProjectReference>
     <!--
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
@@ -70,35 +64,11 @@
     -->
   </ItemGroup>
   <ItemGroup>
-        <Compile Include="../../../../System.Reactive.Experimental/ExperimentalAttribute.cs">
-      <Link>ExperimentalAttribute.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/InternalsVisibleTo.cs">
-      <Link>InternalsVisibleTo.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Properties/AssemblyInfo.cs">
+        <Compile Include="../../../../System.Interactive.Providers/Properties/AssemblyInfo.cs">
       <Link>Properties/AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/Internal/BinaryObserver.cs">
-      <Link>Reactive/Internal/BinaryObserver.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/Linq/QbservableEx.cs">
-      <Link>Reactive/Linq/QbservableEx.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/Linq/IQueryLanguageEx.cs">
-      <Link>Reactive/Linq/IQueryLanguageEx.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/Linq/ObservableEx.cs">
-      <Link>Reactive/Linq/ObservableEx.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/Linq/QbservableEx.Generated.cs">
-      <Link>Reactive/Linq/QbservableEx.Generated.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/Linq/QueryLanguageEx.cs">
-      <Link>Reactive/Linq/QueryLanguageEx.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Experimental/Reactive/ListObservable.cs">
-      <Link>Reactive/ListObservable.cs</Link>
+    <Compile Include="../../../../System.Interactive.Providers/QueryableEx.cs">
+      <Link>QueryableEx.cs</Link>
     </Compile>
 
     <!--

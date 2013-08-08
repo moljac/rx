@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{00DC3654-E373-4E3F-80FE-109F795ADF1F}</ProjectGuid>
+    <ProjectGuid>{065F2411-7610-4AD6-9513-A1EFFCE576C0}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>System.Reactive</RootNamespace>
-    <AssemblyName>System.Reactive.Experimental</AssemblyName>
+    <AssemblyName>System.Interactive.Async</AssemblyName>
     <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;HAS_AWAIT;NUNIT;MONODROID;$(SignAssemblySpec)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -40,16 +40,7 @@
   </ItemGroup>
   <ItemGroup>
 
-<ProjectReference Include="..\System.Reactive.Linq\android_System.Reactive.Linq.csproj">
-  <Project>{63252AE9-5186-45CA-BFCD-FA51C6B66A43}</Project>
-  <Name>android_System.Reactive.Linq</Name>
-</ProjectReference><ProjectReference Include="..\System.Reactive.Core\android_System.Reactive.Core.csproj">
-  <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
-  <Name>android_System.Reactive.Core</Name>
-</ProjectReference><ProjectReference Include="..\System.Reactive.Interfaces\android_System.Reactive.Interfaces.csproj">
-  <Project>{9E9B9C60-98B0-40FA-9C2B-1218D417CAA4}</Project>
-  <Name>android_System.Reactive.Interfaces</Name>
-</ProjectReference>
+
     <!--
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
@@ -58,35 +49,53 @@
     -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\ExperimentalAttribute.cs">
-      <Link>ExperimentalAttribute.cs</Link>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Conversions.cs">
+      <Link>AsyncEnumerable.Conversions.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\InternalsVisibleTo.cs">
-      <Link>InternalsVisibleTo.cs</Link>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Creation.cs">
+      <Link>AsyncEnumerable.Creation.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Properties\AssemblyInfo.cs">
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Exceptions.cs">
+      <Link>AsyncEnumerable.Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Generated.cs">
+      <Link>AsyncEnumerable.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Single.cs">
+      <Link>AsyncEnumerable.Single.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Multiple.cs">
+      <Link>AsyncEnumerable.Multiple.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerable.Aggregates.cs">
+      <Link>AsyncEnumerable.Aggregates.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\AsyncEnumerator.cs">
+      <Link>AsyncEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\Disposables.cs">
+      <Link>Disposables.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\EnumerableGrouping.cs">
+      <Link>EnumerableGrouping.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\IAsyncEnumerable.cs">
+      <Link>IAsyncEnumerable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\IAsyncEnumerator.cs">
+      <Link>IAsyncEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\IAsyncGrouping.cs">
+      <Link>IAsyncGrouping.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\IOrderedAsyncEnumerable.cs">
+      <Link>IOrderedAsyncEnumerable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Interactive.Async\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\Internal\BinaryObserver.cs">
-      <Link>Reactive\Internal\BinaryObserver.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\Linq\QbservableEx.cs">
-      <Link>Reactive\Linq\QbservableEx.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\Linq\IQueryLanguageEx.cs">
-      <Link>Reactive\Linq\IQueryLanguageEx.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\Linq\ObservableEx.cs">
-      <Link>Reactive\Linq\ObservableEx.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\Linq\QbservableEx.Generated.cs">
-      <Link>Reactive\Linq\QbservableEx.Generated.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\Linq\QueryLanguageEx.cs">
-      <Link>Reactive\Linq\QueryLanguageEx.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\System.Reactive.Experimental\Reactive\ListObservable.cs">
-      <Link>Reactive\ListObservable.cs</Link>
+    <Compile Include="..\..\..\..\System.Interactive.Async\TaskExt.cs">
+      <Link>TaskExt.cs</Link>
     </Compile>
 
     <!--
