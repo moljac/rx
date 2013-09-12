@@ -38,8 +38,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-
-
     <!--
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
@@ -120,13 +118,11 @@
     <Compile Include="..\..\..\..\System.Reactive.Interfaces\Reactive\Subjects\ISubject.Multi.cs">
       <Link>Reactive\Subjects\ISubject.Multi.cs</Link>
     </Compile>
-
     <!--
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
