@@ -61,7 +61,10 @@
     -->
   </ItemGroup>
   <ItemGroup>
-        <Compile Include="../../../../System.Interactive/EnumerableEx.Imperative.cs">
+        <Compile Include="../../../../System.Interactive/IAwaitable.cs">
+      <Link>IAwaitable.cs</Link>
+    </Compile>
+    <Compile Include="../../../../System.Interactive/EnumerableEx.Imperative.cs">
       <Link>EnumerableEx.Imperative.cs</Link>
     </Compile>
     <Compile Include="../../../../System.Interactive/EnumerableEx.Multiple.cs">
@@ -81,6 +84,9 @@
     </Compile>
     <Compile Include="../../../../System.Interactive/EnumerableEx.Aggregates.cs">
       <Link>EnumerableEx.Aggregates.cs</Link>
+    </Compile>
+    <Compile Include="../../../../System.Interactive/IYielder.cs">
+      <Link>IYielder.cs</Link>
     </Compile>
     <Compile Include="../../../../System.Interactive/Properties/AssemblyInfo.cs">
       <Link>Properties/AssemblyInfo.cs</Link>

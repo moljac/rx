@@ -64,6 +64,9 @@
 </ProjectReference><ProjectReference Include="..\System.Reactive.Interfaces\ios_System.Reactive.Interfaces.csproj">
   <Project>{9E9B9C60-98B0-40FA-9C2B-1218D417CAA4}</Project>
   <Name>ios_System.Reactive.Interfaces</Name>
+</ProjectReference><ProjectReference Include="..\System.Reactive.Observable.Aliases\ios_System.Reactive.Observable.Aliases.csproj">
+  <Project>{9ffac385-10a4-4ddd-b800-de67e8469cc0}</Project>
+  <Name>ios_System.Reactive.Observable.Aliases</Name>
 </ProjectReference><ProjectReference Include="..\System.Reactive.PlatformServices\ios_System.Reactive.PlatformServices.csproj">
   <Project>{0CCCF009-763F-40D2-8655-7A94828023BF}</Project>
   <Name>ios_System.Reactive.PlatformServices</Name>
@@ -106,6 +109,9 @@
     <Compile Include="../../../../Tests.System.Reactive/Stress/Core/Disposables/Serial.cs">
       <Link>Stress/Core/Disposables/Serial.cs</Link>
     </Compile>
+    <Compile Include="../../../../Tests.System.Reactive/Stress/Core/Schedulers/EventLoop.cs">
+      <Link>Stress/Core/Schedulers/EventLoop.cs</Link>
+    </Compile>
     <Compile Include="../../../../Tests.System.Reactive/Stress/Core/Disposables/SingleAssignment.cs">
       <Link>Stress/Core/Disposables/SingleAssignment.cs</Link>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="../../../../Tests.System.Reactive/TestLongRunningScheduler.cs">
       <Link>TestLongRunningScheduler.cs</Link>
+    </Compile>
+    <Compile Include="../../../../Tests.System.Reactive/Tests/Aliases.cs">
+      <Link>Tests/Aliases.cs</Link>
     </Compile>
     <Compile Include="../../../../Tests.System.Reactive/Tests/AnonymousTest.cs">
       <Link>Tests/AnonymousTest.cs</Link>

@@ -30,6 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -38,18 +39,32 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+
+<ProjectReference Include="..\System.Interactive\android_System.Interactive.csproj">
+  <Project>{8E4B04F0-915E-48F9-9796-76278C6094BD}</Project>
+  <Name>android_System.Interactive</Name>
+</ProjectReference>
+    <!--
+    <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
+      <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
+      <Name>Android.NUnitLite</Name>
+    </ProjectReference>
+    -->
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="..\..\..\..\System.Interactive.Providers\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\System.Interactive.Providers\QueryableEx.cs">
       <Link>QueryableEx.cs</Link>
     </Compile>
+
+    <!--
+    <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
+      <Link>ColdObservable.cs</Link>
+    </Compile>
+    -->
+
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\System.Interactive\android_System.Interactive.csproj">
-      <Project>{5F7F40B6-19D3-48C7-8E15-AE1F976F60E1}</Project>
-      <Name>android_System.Interactive</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using Android.App;
 using Android.OS;
 using Xamarin.Android.NUnitLite;
