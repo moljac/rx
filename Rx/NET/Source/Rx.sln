@@ -51,16 +51,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Reactive.Observable.Aliases", "System.Reactive.Observable.Aliases\System.Reactive.Observable.Aliases.csproj", "{9FFAC385-10A4-4DDD-B800-DE67E8469CC0}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 1
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://tfs1:8085/tfs/interop%20team%20projects
-		SccProjectUniqueName0 = Playground\\Playground.csproj
-		SccProjectName0 = Playground
-		SccAuxPath0 = http://tfs1:8085/tfs/interop%20team%20projects
-		SccLocalPath0 = Playground
-		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Rx.vsmdi
 	EndGlobalSection

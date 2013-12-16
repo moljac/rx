@@ -986,15 +986,6 @@ namespace System.Reactive.Linq
 #endif
         }
 
-        private static IObservable<TResult> SelectMany_<TSource, TResult>(IObservable<TSource> source, Func<TSource, int, IObservable<TResult>> selector)
-        {
-#if !NO_PERF
-            return new SelectMany<TSource, TResult>(source, selector);
-#else
-            return source.Select(selector).Merge();
-#endif
-        }
-
         private static IObservable<TResult> SelectMany_<TSource, TCollection, TResult>(IObservable<TSource> source, Func<TSource, IObservable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
         {
 #if !NO_PERF

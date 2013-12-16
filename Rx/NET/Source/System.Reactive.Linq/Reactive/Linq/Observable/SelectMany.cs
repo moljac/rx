@@ -71,7 +71,7 @@ namespace System.Reactive.Linq.ObservableImpl
 
         protected override IDisposable Run(IObserver<TResult> observer, IDisposable cancel, Action<IDisposable> setSink)
         {
-            if (_collectionSelector != null || _collectionSelectorWithIndex != null)
+            if (_collectionSelector != null)
             {
                 var sink = new _(this, observer, cancel);
                 setSink(sink);
@@ -119,14 +119,12 @@ namespace System.Reactive.Linq.ObservableImpl
                 : base(observer, cancel)
             {
                 _parent = parent;
-                _indexInSource = -1;
             }
 
             private object _gate;
             private bool _isStopped;
             private CompositeDisposable _group;
             private SingleAssignmentDisposable _sourceSubscription;
-            private int _indexInSource;
 
             public IDisposable Run()
             {
@@ -147,13 +145,7 @@ namespace System.Reactive.Linq.ObservableImpl
 
                 try
                 {
-                    if (_parent._collectionSelector != null)
-                        collection = _parent._collectionSelector(value);
-                    else
-                    {
-                        checked { _indexInSource++; }
-                        collection = _parent._collectionSelectorWithIndex(value, _indexInSource);
-                    }
+                    collection = _parent._collectionSelector(value);
                 }
                 catch (Exception ex)
                 {
@@ -208,16 +200,12 @@ namespace System.Reactive.Linq.ObservableImpl
                 private readonly _ _parent;
                 private readonly TSource _value;
                 private readonly IDisposable _self;
-                private int _indexInSource;
-				private int _indexInIntermediate = -1;
 
                 public Iter(_ parent, TSource value, IDisposable self)
                 {
                     _parent = parent;
                     _value = value;
                     _self = self;
-                    _indexInSource = indexInSource;
-					_indexInIntermediate = -1;
                 }
 
                 public void OnNext(TCollection value)
@@ -226,13 +214,7 @@ namespace System.Reactive.Linq.ObservableImpl
 
                     try
                     {
-                        if (_parent._parent._resultSelector != null)
-                            res = _parent._parent._resultSelector(_value, value);
-                        else
-                        {
-                            checked { _indexInIntermediate++; }
-                            res = _parent._parent._resultSelectorWithIndex(_value, _indexInSource, value, _indexInIntermediate);
-                        }
+                        res = _parent._parent._resultSelector(_value, value);
                     }
                     catch (Exception ex)
                     {
@@ -438,13 +420,11 @@ namespace System.Reactive.Linq.ObservableImpl
         class NoSelectorImpl : Sink<TResult>, IObserver<TSource>
         {
             private readonly SelectMany<TSource, TCollection, TResult> _parent;
-            private int _indexInSource;   // The "Weird SelectMany" requires indices in the original collection as well as an intermediate collection
 
             public NoSelectorImpl(SelectMany<TSource, TCollection, TResult> parent, IObserver<TResult> observer, IDisposable cancel)
                 : base(observer, cancel)
             {
                 _parent = parent;
-                _indexInSource = -1;
             }
 
             public void OnNext(TSource value)
@@ -452,13 +432,7 @@ namespace System.Reactive.Linq.ObservableImpl
                 var xs = default(IEnumerable<TCollection>);
                 try
                 {
-                    if (_parent._collectionSelectorE != null)
-                        xs = _parent._collectionSelectorE(value);
-                    else
-                    {
-                        checked { _indexInSource++; }
-                        xs = _parent._collectionSelectorEWithIndex(value, _indexInSource);
-                    }
+                    xs = _parent._collectionSelectorE(value);
                 }
                 catch (Exception exception)
                 {
@@ -481,7 +455,6 @@ namespace System.Reactive.Linq.ObservableImpl
 
                 try
                 {
-                    int indexInIntermediate = -1;
                     var hasNext = true;
                     while (hasNext)
                     {
@@ -492,15 +465,7 @@ namespace System.Reactive.Linq.ObservableImpl
                         {
                             hasNext = e.MoveNext();
                             if (hasNext)
-                            {
-                                if (_parent._resultSelector != null)
-                                    current = _parent._resultSelector(value, e.Current);
-                                else
-                                {
-                                    checked { indexInIntermediate++; }
-                                    current = _parent._resultSelectorWithIndex(value, _indexInSource, e.Current, indexInIntermediate);
-                                }
-                            }
+                                current = _parent._resultSelector(value, e.Current);
                         }
                         catch (Exception exception)
                         {
@@ -964,7 +929,7 @@ namespace System.Reactive.Linq.ObservableImpl
 
         protected override IDisposable Run(IObserver<TResult> observer, IDisposable cancel, Action<IDisposable> setSink)
         {
-            if (_selector != null || _selectorWithIndex != null)
+            if (_selector != null)
             {
                 var sink = new _(this, observer, cancel);
                 setSink(sink);
@@ -1200,7 +1165,6 @@ namespace System.Reactive.Linq.ObservableImpl
                 : base(observer, cancel)
             {
                 _parent = parent;
-                _index = -1;
             }
 
             private object _gate;
@@ -1251,13 +1215,7 @@ namespace System.Reactive.Linq.ObservableImpl
 
                     try
                     {
-                        if (_parent._selectorOnError != null)
-                            inner = _parent._selectorOnError(error);
-                        else
-                        {
-                            checked { _index++; }
-                            inner = _parent._selectorWithIndexOnError(error, _index);
-                        }
+                        inner = _parent._selectorOnError(error);
                     }
                     catch (Exception ex)
                     {
@@ -1291,10 +1249,7 @@ namespace System.Reactive.Linq.ObservableImpl
 
                     try
                     {
-                        if (_parent._selectorOnCompleted != null)
-                            inner = _parent._selectorOnCompleted();
-                        else
-                            inner = _parent._selectorWithIndexOnCompleted(_index);
+                        inner = _parent._selectorOnCompleted();
                     }
                     catch (Exception ex)
                     {
@@ -1394,13 +1349,11 @@ namespace System.Reactive.Linq.ObservableImpl
         class NoSelectorImpl : Sink<TResult>, IObserver<TSource>
         {
             private readonly SelectMany<TSource, TResult> _parent;
-            private int _index;
 
             public NoSelectorImpl(SelectMany<TSource, TResult> parent, IObserver<TResult> observer, IDisposable cancel)
                 : base(observer, cancel)
             {
                 _parent = parent;
-                _index = -1;
             }
 
             public void OnNext(TSource value)
@@ -1408,13 +1361,7 @@ namespace System.Reactive.Linq.ObservableImpl
                 var xs = default(IEnumerable<TResult>);
                 try
                 {
-                    if (_parent._selectorE != null)
-                        xs = _parent._selectorE(value);
-                    else
-                    {
-                        checked { _index++; }
-                        xs = _parent._selectorEWithIndex(value, _index);
-                    }
+                    xs = _parent._selectorE(value);
                 }
                 catch (Exception exception)
                 {
