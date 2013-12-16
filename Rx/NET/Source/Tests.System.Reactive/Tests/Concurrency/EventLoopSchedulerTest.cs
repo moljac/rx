@@ -13,6 +13,7 @@ using TestMethodAttribute = NUnit.Framework.TestAttribute;
 using TestInitializeAttribute = NUnit.Framework.SetUpAttribute;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+#endif
 #if STRESS
 using ReactiveTests.Stress.Schedulers;
 #endif
