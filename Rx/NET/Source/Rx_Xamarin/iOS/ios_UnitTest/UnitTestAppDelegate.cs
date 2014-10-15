@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
+#if __UNIFIED__
+using UIKit;
+using Foundation;
+#else
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+#endif
+
 using MonoTouch.NUnit.UI;
 
 namespace ios_UnitTest
@@ -16,7 +22,7 @@ namespace ios_UnitTest
 	{
 		// class-level declarations
 		UIWindow window;
-		TouchRunner runner;
+		MonoTouch.NUnit.UI.TouchRunner runner;
 
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this 

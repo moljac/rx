@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{29731DBF-8925-425F-8AD4-6A103563E9B7}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{42520E71-AD33-45A4-90C8-92F87B0EB119}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>ios_UnitTest</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -17,15 +17,15 @@
     <DebugType>full</DebugType>
     <Optimize>False</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;__UNIFIED__;</DefineConstants>
+    <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchDebug>True</MtouchDebug>
     <MtouchLink>None</MtouchLink>
     <ConsolePause>False</ConsolePause>
-    <OutputPath>bin\unified\iPhoneSimulator\Debug</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\iPhoneSimulator\Debug</IntermediateOutputPath>
+    <OutputPath>bin\classic\iPhoneSimulator\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\iPhoneSimulator\Debug</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -35,9 +35,9 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <OutputPath>bin\unified\iPhoneSimulator\Release</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\iPhoneSimulator\Release</IntermediateOutputPath>
+    <OutputPath>bin\classic\iPhoneSimulator\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\iPhoneSimulator\Release</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>True</DebugSymbols>
@@ -52,9 +52,9 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
-    <OutputPath>bin\unified\iPhone\Debug</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\iPhone\Debug</IntermediateOutputPath>
+    <OutputPath>bin\classic\iPhone\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\iPhone\Debug</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -64,9 +64,9 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <OutputPath>bin\unified\iPhone\Release</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\iPhone\Release</IntermediateOutputPath>
+    <OutputPath>bin\classic\iPhone\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\iPhone\Release</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -78,9 +78,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <BuildIpa>True</BuildIpa>
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
-    <OutputPath>bin\unified\Ad-Hoc\</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\Ad-Hoc\</IntermediateOutputPath>
+    <OutputPath>bin\classic\Ad-Hoc\</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\Ad-Hoc\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -91,15 +91,15 @@
     <ConsolePause>False</ConsolePause>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
-    <OutputPath>bin\unified\AppStore\</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\AppStore\</IntermediateOutputPath>
+    <OutputPath>bin\classic\AppStore\</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\AppStore\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="Xamarin.iOS" />
+    <Reference Include="monotouch" />
     <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <ItemGroup>
@@ -112,39 +112,40 @@
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\rx\System.Reactive.PlatformServices\ios_System.Reactive.PlatformServices.csproj">
-      <Project>{D73D8D01-0FB0-4588-B7D3-17B4344C2DFA}</Project>
-      <Name>ios_System.Reactive.PlatformServices</Name>
+    <ProjectReference Include="..\rx\System.Reactive.PlatformServices\ios_System.Reactive.PlatformServices-Classic.csproj">
+      <Project>{79A43CEB-1A18-49EA-AAC4-B72B9C90BF5A}</Project>
+      <Name>ios_System.Reactive.PlatformServices-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Linq\ios_System.Reactive.Linq.csproj">
-      <Project>{7A88F0ED-CFBE-4C23-91BF-796F45F62DAF}</Project>
-      <Name>ios_System.Reactive.Linq</Name>
+    <ProjectReference Include="..\rx\System.Reactive.Linq\ios_System.Reactive.Linq-Classic.csproj">
+      <Project>{0A977063-0796-4CD4-84B8-AEDB2D648B26}</Project>
+      <Name>ios_System.Reactive.Linq-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Interfaces\ios_System.Reactive.Interfaces.csproj">
-      <Project>{DDCF03D5-8FE6-49B3-B6F6-77694ECA9D6C}</Project>
-      <Name>ios_System.Reactive.Interfaces</Name>
+    <ProjectReference Include="..\rx\System.Reactive.Interfaces\ios_System.Reactive.Interfaces-Classic.csproj">
+      <Project>{6F2675F5-FCC7-4A28-9DC3-657B4613DCC5}</Project>
+      <Name>ios_System.Reactive.Interfaces-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Experimental\ios_System.Reactive.Experimental.csproj">
-      <Project>{CA9E0C62-D18D-423D-A40C-BCE783C3B76D}</Project>
-      <Name>ios_System.Reactive.Experimental</Name>
+    <ProjectReference Include="..\rx\System.Reactive.Experimental\ios_System.Reactive.Experimental-Classic.csproj">
+      <Project>{24F995BD-7075-489C-B7A5-7FDE08C304B6}</Project>
+      <Name>ios_System.Reactive.Experimental-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Debugger\ios_System.Reactive.Debugger.csproj">
-      <Project>{35B43E08-C1EA-4D28-8A68-8AEC6305C44D}</Project>
-      <Name>ios_System.Reactive.Debugger</Name>
+    <ProjectReference Include="..\rx\System.Reactive.Debugger\ios_System.Reactive.Debugger-Classic.csproj">
+      <Project>{B41CB61A-DCA0-4539-8F99-7B3499E18E6D}</Project>
+      <Name>ios_System.Reactive.Debugger-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Core\ios_System.Reactive.Core.csproj">
-      <Project>{B71E4ED3-46FC-4A74-9703-10B534F65BB9}</Project>
-      <Name>ios_System.Reactive.Core</Name>
+    <ProjectReference Include="..\rx\System.Reactive.Core\ios_System.Reactive.Core-Classic.csproj">
+      <Project>{A67F34B5-75C1-4319-A93E-93DF87E728A4}</Project>
+      <Name>ios_System.Reactive.Core-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\Mono.Reactive.Testing\ios_Mono.Reactive.Testing.csproj">
-      <Project>{81E1733F-CE1E-473A-B071-1455E5855E0A}</Project>
-      <Name>ios_Mono.Reactive.Testing</Name>
+    <ProjectReference Include="..\Mono.Reactive.Testing\ios_Mono.Reactive.Testing-Classic.csproj">
+      <Project>{47D85A91-E8E2-4088-BF5A-68A161754D48}</Project>
+      <Name>ios_Mono.Reactive.Testing-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\Tests.System.Reactive\ios_Tests.System.Reactive.csproj">
-      <Project>{350E92BB-B79A-4112-B5C9-25E58BFC8D14}</Project>
-      <Name>ios_Tests.System.Reactive</Name>
+    <ProjectReference Include="..\rx\Tests.System.Reactive\ios_Tests.System.Reactive-Classic.csproj">
+      <Project>{45377009-1425-47FC-985E-05F98022F9E3}</Project>
+      <Name>ios_Tests.System.Reactive-Classic</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

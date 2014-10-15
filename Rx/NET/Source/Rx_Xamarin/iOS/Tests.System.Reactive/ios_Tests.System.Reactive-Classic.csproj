@@ -3,17 +3,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F09AD05F-65B6-45B2-8AE6-416D84FF5B8D}</ProjectGuid>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{45377009-1425-47FC-985E-05F98022F9E3}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Reactive</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>Tests.System.Reactive</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
-    <DefineConstants>NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB__UNIFIED__;</DefineConstants>
+    <DefineConstants>NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -23,9 +23,10 @@
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>DEBUG;MONOTOUCH;NUNIT;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
-    <OutputPath>bin\unified\AnyCPU\Debug</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\AnyCPU\Debug</IntermediateOutputPath>
+    <OutputPath>bin\classic\AnyCPU\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\AnyCPU\Debug</IntermediateOutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -34,9 +35,10 @@
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>MONOTOUCH;NO_TASK_DELAY;PREFER_ASYNC;HAS_APTCA;NO_WINDOWS_THREADING;NO_SERIALIZABLE;NO_REFLECTION_EMIT;PLIB</DefineConstants>
-    <OutputPath>bin\unified\AnyCPU\Release</OutputPath>
-    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>obj\unified\AnyCPU\Release</IntermediateOutputPath>
+    <OutputPath>bin\classic\AnyCPU\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\classic\AnyCPU\Release</IntermediateOutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB</DefineConstants>
@@ -48,7 +50,7 @@
     <BuildPlatform>MOBILE</BuildPlatform>
     <BuildFlavor>MONOTOUCH</BuildFlavor>
   </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\..\Common.targets" />
   <PropertyGroup>
     <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
   </PropertyGroup>
@@ -322,41 +324,38 @@
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mono.Reactive.Testing\ios_Mono.Reactive.Testing.csproj">
-      <Project>{47D85A91-E8E2-4088-BF5A-68A161754D48}</Project>
-      <Name>ios_Mono.Reactive.Testing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Core\ios_System.Reactive.Core.csproj">
+    <ProjectReference Include="..\rx\System.Reactive.Core\ios_System.Reactive.Core-Classic.csproj">
       <Project>{A67F34B5-75C1-4319-A93E-93DF87E728A4}</Project>
-      <Name>ios_System.Reactive.Core</Name>
+      <Name>ios_System.Reactive.Core-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Debugger\ios_System.Reactive.Debugger.csproj">
+    <ProjectReference Include="..\rx\System.Reactive.Debugger\ios_System.Reactive.Debugger-Classic.csproj">
       <Project>{B41CB61A-DCA0-4539-8F99-7B3499E18E6D}</Project>
-      <Name>ios_System.Reactive.Debugger</Name>
+      <Name>ios_System.Reactive.Debugger-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Experimental\ios_System.Reactive.Experimental.csproj">
+    <ProjectReference Include="..\rx\System.Reactive.Experimental\ios_System.Reactive.Experimental-Classic.csproj">
       <Project>{24F995BD-7075-489C-B7A5-7FDE08C304B6}</Project>
-      <Name>ios_System.Reactive.Experimental</Name>
+      <Name>ios_System.Reactive.Experimental-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Interfaces\ios_System.Reactive.Interfaces.csproj">
+    <ProjectReference Include="..\rx\System.Reactive.Interfaces\ios_System.Reactive.Interfaces-Classic.csproj">
       <Project>{6F2675F5-FCC7-4A28-9DC3-657B4613DCC5}</Project>
-      <Name>ios_System.Reactive.Interfaces</Name>
+      <Name>ios_System.Reactive.Interfaces-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Linq\ios_System.Reactive.Linq.csproj">
+    <ProjectReference Include="..\rx\System.Reactive.Linq\ios_System.Reactive.Linq-Classic.csproj">
       <Project>{0A977063-0796-4CD4-84B8-AEDB2D648B26}</Project>
-      <Name>ios_System.Reactive.Linq</Name>
+      <Name>ios_System.Reactive.Linq-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.PlatformServices\ios_System.Reactive.PlatformServices.csproj">
+    <ProjectReference Include="..\rx\System.Reactive.PlatformServices\ios_System.Reactive.PlatformServices-Classic.csproj">
       <Project>{79A43CEB-1A18-49EA-AAC4-B72B9C90BF5A}</Project>
-      <Name>ios_System.Reactive.PlatformServices</Name>
+      <Name>ios_System.Reactive.PlatformServices-Classic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rx\System.Reactive.Runtime.Remoting\ios_System.Reactive.Runtime.Remoting.csproj">
-      <Project>{92857C8E-0E83-4D02-A831-8AF3FED43336}</Project>
-      <Name>ios_System.Reactive.Runtime.Remoting</Name>
+    <ProjectReference Include="..\Mono.Reactive.Testing\ios_Mono.Reactive.Testing-Classic.csproj">
+      <Project>{47D85A91-E8E2-4088-BF5A-68A161754D48}</Project>
+      <Name>ios_Mono.Reactive.Testing-Classic</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

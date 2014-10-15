@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{912E14A2-7BDF-4600-8D55-E8C4F33A2063}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1FBCB0FD-7519-475B-BDF0-8660AFDE6465}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Reactive</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>System.Reactive.Windows.Forms</AssemblyName>
     <ProductSignAssembly>true</ProductSignAssembly>
-    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;NO_EXPRESSIONS;HAS_AWAIT;NUNIT;$(SignAssemblySpec)</DefineConstants>
+    <DefineConstants>NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;NO_EXPRESSIONS;HAS_AWAIT;NUNIT;$(SignAssemblySpec)__UNIFIED__;</DefineConstants>
     <additionalargs>-delaySign</additionalargs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -24,6 +24,9 @@
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>DEBUG;NO_TASK_DELAY;NO_WINDOWS_THREADING;NO_REMOTING;NO_REFLECTION_EMIT;NO_EXPRESSIONS;HAS_AWAIT;NUNIT;$(SignAssemblySpec)</DefineConstants>
+    <OutputPath>bin\unified\AnyCPU\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\AnyCPU\Debug</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -31,6 +34,9 @@
     <OutputPath>bin\Release</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\unified\AnyCPU\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\AnyCPU\Release</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <!--
@@ -41,21 +47,21 @@
     <BuildPlatform>MOBILE</BuildPlatform>
     <BuildFlavor>MONOTOUCH</BuildFlavor>
   </PropertyGroup>
-  <Import Project="..\..\..\Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="MonoTouch.NUnitLite" />
-    
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\System.Reactive.Core\ios_System.Reactive.Core.csproj">
-  <Project>{4E516F10-DA7A-4D43-963E-A93865ABEA5B}</Project>
-  <Name>ios_System.Reactive.Core</Name>
-</ProjectReference><ProjectReference Include="..\System.Reactive.Interfaces\ios_System.Reactive.Interfaces.csproj">
-  <Project>{9E9B9C60-98B0-40FA-9C2B-1218D417CAA4}</Project>
-  <Name>ios_System.Reactive.Interfaces</Name>
-</ProjectReference>
+      <Project>{B71E4ED3-46FC-4A74-9703-10B534F65BB9}</Project>
+      <Name>ios_System.Reactive.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Reactive.Interfaces\ios_System.Reactive.Interfaces.csproj">
+      <Project>{DDCF03D5-8FE6-49B3-B6F6-77694ECA9D6C}</Project>
+      <Name>ios_System.Reactive.Interfaces</Name>
+    </ProjectReference>
     <!--
     <ProjectReference Include="..\Andr.Unit\Android.NUnitLite\Android.NUnitLite.csproj">
       <Project>{6A005891-A3D6-4398-A729-F645397D573A}</Project>
@@ -64,25 +70,23 @@
     -->
   </ItemGroup>
   <ItemGroup>
-        <Compile Include="../../../../System.Reactive.Windows.Forms/GlobalSuppressions.cs">
-      <Link>GlobalSuppressions.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Windows.Forms/Reactive/Linq/ControlObservable.cs">
-      <Link>Reactive/Linq/ControlObservable.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Windows.Forms/Reactive/Concurrency/ControlScheduler.cs">
-      <Link>Reactive/Concurrency/ControlScheduler.cs</Link>
-    </Compile>
-    <Compile Include="../../../../System.Reactive.Windows.Forms/Properties/AssemblyInfo.cs">
-      <Link>Properties/AssemblyInfo.cs</Link>
-    </Compile>
-
     <!--
     <Compile Include="..\..\..\Microsoft.Reactive.Testing\ColdObservable.cs">
       <Link>ColdObservable.cs</Link>
     </Compile>
     -->
-    
+    <Compile Include="..\..\..\..\System.Reactive.Windows.Forms\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Reactive.Windows.Forms\Reactive\Linq\ControlObservable.cs">
+      <Link>Reactive\Linq\ControlObservable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Reactive.Windows.Forms\Reactive\Concurrency\ControlScheduler.cs">
+      <Link>Reactive\Concurrency\ControlScheduler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\System.Reactive.Windows.Forms\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
