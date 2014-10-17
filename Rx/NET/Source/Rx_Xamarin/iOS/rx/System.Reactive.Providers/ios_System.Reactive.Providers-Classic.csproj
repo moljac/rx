@@ -55,15 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\System.Reactive.Core\ios_System.Reactive.Core-Classic.csproj">
-      <Project>{B71E4ED3-46FC-4A74-9703-10B534F65BB9}</Project>
+      <Project>{A67F34B5-75C1-4319-A93E-93DF87E728A4}</Project>
       <Name>ios_System.Reactive.Core-Classic</Name>
     </ProjectReference>
     <ProjectReference Include="..\System.Reactive.Interfaces\ios_System.Reactive.Interfaces-Classic.csproj">
-      <Project>{DDCF03D5-8FE6-49B3-B6F6-77694ECA9D6C}</Project>
+      <Project>{6F2675F5-FCC7-4A28-9DC3-657B4613DCC5}</Project>
       <Name>ios_System.Reactive.Interfaces-Classic</Name>
     </ProjectReference>
     <ProjectReference Include="..\System.Reactive.Linq\ios_System.Reactive.Linq-Classic.csproj">
-      <Project>{7A88F0ED-CFBE-4C23-91BF-796F45F62DAF}</Project>
+      <Project>{0A977063-0796-4CD4-84B8-AEDB2D648B26}</Project>
       <Name>ios_System.Reactive.Linq-Classic</Name>
     </ProjectReference>
     <!--
