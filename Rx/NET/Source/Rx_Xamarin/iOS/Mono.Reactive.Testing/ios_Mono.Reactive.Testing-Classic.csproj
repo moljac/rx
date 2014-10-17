@@ -34,7 +34,7 @@
     <OutputPath>bin\Release</OutputPath>
     <ConsolePause>False</ConsolePause>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB</DefineConstants>
+    <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_PROGRESS;PREFER_ASYNC;HAS_APTCA;NO_REMOTING;NO_SERIALIZABLE;NO_THREAD;CRIPPLED_REFLECTION;PLIB;NUNIT</DefineConstants>
     <OutputPath>bin\classic\AnyCPU\Release</OutputPath>
     <BaseIntermediateOutputPath>obj\classic\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>obj\classic\AnyCPU\Release</IntermediateOutputPath>
