@@ -16,7 +16,7 @@ using TestInitializeAttribute = NUnit.Framework.SetUpAttribute;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 #endif
 using System.Reactive.Linq;
-using System.Reactive.Observable.Aliases;
+//using System.Reactive.Observable.Aliases;
 
 namespace ReactiveTests.Tests
 {
